@@ -1,0 +1,12 @@
+# IDES
+.idea/
+.vscode/
+
+# Config files
+.env
+
+# lib files
+node_modules/
+
+# control version
+.git
