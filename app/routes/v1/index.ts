@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import apiRouter from './v1'
+import apiRouter from './api'
 
 
 const router = Router()
@@ -7,7 +7,7 @@ const router = Router()
 /**
  * load api routes
  */
-router.use('/api', apiRouter)
+router.use('/v1', apiRouter)
 
 
 export default router

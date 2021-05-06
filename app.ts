@@ -1,7 +1,10 @@
 import express from 'express'
 import envConfig from './app/config/env'
+import routes from './app/routes'
 
 const app = express()
+
+app.use(routes);
 
 app.get('/', (req, res) => {
   res.send('Welcome to DARE')
