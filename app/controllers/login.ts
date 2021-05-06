@@ -1,6 +1,9 @@
 import { Request, Response } from 'express'
 
-export class loginController {
-  public login (req: Request, res: Response) {
+const loginController = {
+  login: async (req, res: Response) => {
+    res.send(req.token)
   }
 }
+
+export default loginController

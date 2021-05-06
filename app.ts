@@ -1,10 +1,16 @@
 import express from 'express'
 import envConfig from './app/config/env'
 import routes from './app/routes'
+import bodyParser from 'body-parser'
 
 const app = express()
 
-app.use(routes);
+
+app.use(
+  bodyParser.urlencoded({extended: false}),
+  bodyParser.json()
+)
+app.use(routes)
 
 app.get('/', (req, res) => {
   res.send('Welcome to DARE')

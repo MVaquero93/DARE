@@ -7,6 +7,14 @@ const envConfig = {
     domain: process.env.APP_DOMAIN || 'localhost',
     port: process.env.PORT || '3030',
   },
+  api: {
+    url: process.env.DARE_API || 'https://dare-nodejs-assessment.herokuapp.com/api/',  
+  },
+  credentials: {
+    client_id: process.env.CLIENT_ID || 'dare',
+    client_secret: process.env.CLIENT_SECRET || 's3cr3t',
+    expires_in: 1000 * 60,
+  }
 }
 
 export default envConfig

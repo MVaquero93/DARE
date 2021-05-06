@@ -1,13 +1,23 @@
+import axios from 'axios'
 import { Request, Response } from 'express'
+import envConfig from '../config/env'
+import { getClients } from '../services/clients.service'
 
-export class clientsController {
+const clientsController = {
 
-  public getAll(req: Request, res: Response) {
-  }
+  getAll: async (req, res: Response) => {
+    try {  
+      res.send('ok')
+    } catch(e) {
+      res.send(e.toString())
+    }
+  },
 
-  public getOne(req: Request, res: Response){
-  }
+  getOne: (req, res: Response) => {
+  },
 
-  public getPoliciesByClient (req: Request, res: Response){
+  getPoliciesByClient: (req, res: Response) => {
   }
 }
+
+export default clientsController
