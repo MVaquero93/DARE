@@ -13,7 +13,7 @@ const envConfig = {
   credentials: {
     client_id: process.env.CLIENT_ID || 'dare',
     client_secret: process.env.CLIENT_SECRET || 's3cr3t',
-    expires_in: 1000 * 60,
+    expires_in: 60 * 60 * 1000,
   }
 }
 

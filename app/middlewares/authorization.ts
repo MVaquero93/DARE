@@ -1,8 +1,7 @@
 import { getToken } from "../helpers/manage-token"
 
-export const authenticate = async (req, res, next) => {
+export const authorization = async (req, res, next) => {
 	const token = await getToken()
-  console.log(token)
 
 	if (token) {
 		req.token = token

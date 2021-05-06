@@ -5,7 +5,7 @@ import { login } from '../services/login.service'
 let data = {} as TokenData
 
 export const getToken = async () => {
-  return data
+  return data.token
 }
 
 export const setToken = async () => {

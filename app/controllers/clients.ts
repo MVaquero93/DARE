@@ -1,22 +1,24 @@
 import axios from 'axios'
 import { Request, Response } from 'express'
 import envConfig from '../config/env'
-import { getClients } from '../services/clients.service'
+import { getClients, getOneClient, getPoliciesByClient } from '../services/clients.service'
 
 const clientsController = {
 
   getAll: async (req, res: Response) => {
     try {  
-      res.send('ok')
+      res.send(await getClients())
     } catch(e) {
       res.send(e.toString())
     }
   },
 
-  getOne: (req, res: Response) => {
+  getOne: async (req, res: Response) => {
+    res.send(await getOneClient(req.params.id))
   },
 
-  getPoliciesByClient: (req, res: Response) => {
+  getPoliciesByClient: async (req, res: Response) => {
+    res.send(await getPoliciesByClient(req.params.id))
   }
 }
 
