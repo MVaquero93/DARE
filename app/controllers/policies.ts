@@ -1,11 +1,19 @@
 import { Request, Response } from 'express'
+import { getOnePolice, getPolicies } from '../services/policies.service'
 
-export class policiesController {
+const policiesController = {
 
-  public getAll(req: Request, res: Response) {
-  }
+  getAll: async (req, res: Response) => {
+    try {  
+      res.send(await getPolicies())
+    } catch(e) {
+      res.send(e.toString())
+    }
+  },
 
-  public getOne(req: Request, res: Response){
-  }
+  getOne: async (req, res: Response) => {
+    res.send(await getOnePolice(req.params.id))
+  },
 }
 
+export default policiesController
