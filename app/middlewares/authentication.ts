@@ -7,6 +7,7 @@ export const authenticate = async (req, res, next) => {
 		req.token = token
 		return next()
 	}
+	console.log('ps')
 	return res.status(401).json({
 		message: 'Unauthorized',
 	})

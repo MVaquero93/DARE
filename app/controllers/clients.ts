@@ -1,6 +1,4 @@
-import axios from 'axios'
 import { Request, Response } from 'express'
-import envConfig from '../config/env'
 import { getClients, getOneClient, getPoliciesByClient } from '../services/clients.service'
 
 const clientsController = {
