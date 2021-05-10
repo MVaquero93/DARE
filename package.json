@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node app.ts",
     "build": "tsc",
-    "lint": "tslint --fix --project ./tsconfig.json"
+    "lint": "tslint --fix --project ./tsconfig.json",
+    "test": "jest --forceExit --maxWorkers=1"
   },
   "keywords": [],
   "author": "",

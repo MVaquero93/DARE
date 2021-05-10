@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`e2e testing example Call to clients list endpoint 1`] = `undefined`;
