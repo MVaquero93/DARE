@@ -1,14 +1,13 @@
-import { setToken } from "../helpers/manage-token"
+import { setToken } from '../services/manage-token.service'
 
 export const authenticate = async (req, res, next) => {
-	const token = await setToken()
+  const token = await setToken()
 
-	if (token) {
-		req.token = token
-		return next()
-	}
-	console.log('ps')
-	return res.status(401).json({
-		message: 'Unauthorized',
-	})
+  if (token) {
+    req.token = token
+    return next()
+  }
+  return res.status(401).json({
+    message: 'Unauthorized',
+  })
 }

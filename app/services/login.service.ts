@@ -5,7 +5,7 @@ import { TokenData } from '../interfaces/tokenData.interface'
 export const login = async (): Promise<TokenData> => {
   const resp = await axios.post(envConfig.api.url + 'login', {
     client_id: envConfig.credentials.client_id,
-    client_secret: envConfig.credentials.client_secret
+    client_secret: envConfig.credentials.client_secret,
   })
 
   return {

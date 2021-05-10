@@ -8,7 +8,7 @@ const app = express()
 
 app.use(
   bodyParser.urlencoded({extended: false}),
-  bodyParser.json()
+  bodyParser.json(),
 )
 app.use(routes)
 

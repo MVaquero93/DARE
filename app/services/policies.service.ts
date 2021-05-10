@@ -1,5 +1,5 @@
-import { apiRequest } from "../helpers/axios-request"
-import { getToken } from "../helpers/manage-token"
+import { apiRequest } from '../helpers/axios-request'
+import { getToken } from './manage-token.service'
 
 export const getPolicies = async () => {
   return apiRequest('policies', await getToken())

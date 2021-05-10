@@ -4,7 +4,7 @@ import { getClients, getOneClient, getPoliciesByClient } from '../services/clien
 const clientsController = {
 
   getAll: async (req, res: Response) => {
-    try {  
+    try {
       return getClients()
     } catch(e) {
       return e
@@ -12,7 +12,7 @@ const clientsController = {
   },
 
   getOne: async (req, res: Response) => {
-    try {  
+    try {
       return getOneClient(req.params.id)
     } catch(e) {
       return e
@@ -20,12 +20,12 @@ const clientsController = {
   },
 
   getPoliciesByClient: async (req, res: Response) => {
-    try {  
+    try {
       return getPoliciesByClient(req.params.id)
     } catch(e) {
       return e
     }
-  }
+  },
 }
 
 export default clientsController

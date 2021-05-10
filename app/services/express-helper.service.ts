@@ -5,7 +5,7 @@ const handleThirdPartyError = (controllerToCall) => {
     }).catch((err) => {
       return res.status(err.response.status).json({
         message: err.response.statusText,
-      }) 
+      })
     })
   }
 }

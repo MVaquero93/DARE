@@ -4,7 +4,7 @@ import { getOnePolice, getPolicies } from '../services/policies.service'
 const policiesController = {
 
   getAll: async (req, res: Response) => {
-    try {  
+    try {
       return getPolicies()
     } catch(e) {
       return e
@@ -12,7 +12,7 @@ const policiesController = {
   },
 
   getOne: async (req, res: Response) => {
-    try {  
+    try {
       return getOnePolice(req.params.id)
     } catch(e) {
       return e

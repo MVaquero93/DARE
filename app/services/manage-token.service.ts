@@ -1,5 +1,5 @@
 import { TokenData } from '../interfaces/tokenData.interface'
-import { login } from '../services/login.service'
+import { login } from './login.service'
 let data = {} as TokenData
 let expiration
 
@@ -9,7 +9,7 @@ export const getToken = async () => {
     // Validate token expiration
     if(validateExpirationToken()) return data.token
     console.log('Token expired. Getting a new one...')
-    
+
     // If token has expired ask new one.
     const renovatedToken = await setToken()
     if(renovatedToken) return renovatedToken.token
@@ -31,8 +31,8 @@ const validateExpirationToken = () => {
   return new Date() < expiration
 }
 
-const saveNextExpiration = (expires_in) => {
-  const t = new Date();
-  t.setSeconds(t.getSeconds() + expires_in);
+const saveNextExpiration = (expiresIn) => {
+  const t = new Date()
+  t.setSeconds(t.getSeconds() + expiresIn)
   expiration = t
 }
