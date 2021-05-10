@@ -11,7 +11,7 @@ $ npm i
 ```bash
 $ nodemon
 ```
-Alternativily, if dont have nodemon installed can execute <b>npm i -g nodemon</b> to install it or just <b>npm run start</b>
+Alternatively, if don't have nodemon installed in your computer, can execute <b>npm i -g nodemon</b> to install it or just <b>npm run start</b> to compile the project without nodemon.
 
 ## Run tests
 
