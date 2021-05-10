@@ -15,6 +15,7 @@ const envConfig = {
     client_secret: process.env.CLIENT_SECRET || 's3cr3t',
     expires_in: 200,
   },
+  env: '',
 }
 
 export default envConfig

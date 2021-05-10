@@ -23,7 +23,7 @@ export const setToken = async () => {
     saveNextExpiration(data.expires_in)
     return data
   } catch (err) {
-    
+
     throw new Error(err)
   }
 }

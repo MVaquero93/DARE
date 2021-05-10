@@ -1,16 +1,15 @@
 import request from 'request-promise-native'
 import envConfig from '../app/config/env'
+import app from '../app'
 
-describe('route testing', () => {
+describe('route integration testing example', () => {
 
-  const endPoint = envConfig.app.protocol + '://' + envConfig.app.domain + ':3030'
-  let server
-  beforeAll(async () => {
-    server = require('../app')
-  })
+  const endPoint = envConfig.app.protocol + '://' + envConfig.app.domain + ':' + envConfig.app.port
 
-  afterAll(async () => {
-    await server.close();
+  afterAll((done) => {
+    app.close(() => {
+      done()
+    })
   });
 
   it('test welcome route', async () => {

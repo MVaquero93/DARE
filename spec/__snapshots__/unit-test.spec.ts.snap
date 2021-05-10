@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit testing example Set token method 1`] = `
+Object {
+  "expires_in": 200,
+  "token": "",
+  "type": "Bearer",
+}
+`;

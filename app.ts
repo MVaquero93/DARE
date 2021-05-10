@@ -16,8 +16,8 @@ app.get('/', (req, res) => {
   res.send('Welcome to DARE')
 })
 
-const appServer = app.listen(envConfig.app.port, () => {
+const server = app.listen(envConfig.app.port, () => {
   console.log('listening at port: ' + envConfig.app.port)
 })
 
-export default appServer
+export default server
