@@ -1,8 +1,12 @@
 import { Router } from 'express'
 import policiesController from '../../../controllers/policies'
-const router = Router()
+import { authorization } from '../../../middlewares/authorization'
+import { hTPE } from '../../../services/express-helper.service'
 
-router.get('/', policiesController.getAll)
-router.get('/:id', policiesController.getOne)
+const router = Router()
+router.use(authorization)
+
+router.get('/', hTPE(policiesController.getAll))
+router.get('/:id', hTPE(policiesController.getOne))
 
 export default router

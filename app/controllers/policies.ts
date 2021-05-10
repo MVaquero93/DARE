@@ -5,14 +5,18 @@ const policiesController = {
 
   getAll: async (req, res: Response) => {
     try {  
-      res.send(await getPolicies())
+      return getPolicies()
     } catch(e) {
-      res.send(e.toString())
+      return e
     }
   },
 
   getOne: async (req, res: Response) => {
-    res.send(await getOnePolice(req.params.id))
+    try {  
+      return getOnePolice(req.params.id)
+    } catch(e) {
+      return e
+    }
   },
 }
 

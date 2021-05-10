@@ -5,18 +5,26 @@ const clientsController = {
 
   getAll: async (req, res: Response) => {
     try {  
-      res.send(await getClients())
+      return getClients()
     } catch(e) {
-      res.send(e.toString())
+      return e
     }
   },
 
   getOne: async (req, res: Response) => {
-    res.send(await getOneClient(req.params.id))
+    try {  
+      return getOneClient(req.params.id)
+    } catch(e) {
+      return e
+    }
   },
 
   getPoliciesByClient: async (req, res: Response) => {
-    res.send(await getPoliciesByClient(req.params.id))
+    try {  
+      return getPoliciesByClient(req.params.id)
+    } catch(e) {
+      return e
+    }
   }
 }
 
