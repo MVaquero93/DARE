@@ -6,5 +6,5 @@ export const getPolicies = async () => {
 }
 
 export const getOnePolice = async (id) => {
-  return (await apiRequest('policies', await getToken())).filter(policie => policie.id === id)
+  return (await apiRequest('policies', await getToken())).find(policie => policie.id === id)
 }

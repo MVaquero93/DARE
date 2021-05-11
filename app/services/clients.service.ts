@@ -6,7 +6,7 @@ export const getClients = async () => {
 }
 
 export const getOneClient = async (id) => {
-  return (await apiRequest('clients', await getToken())).filter(client => client.id === id)
+  return (await apiRequest('clients', await getToken())).find(client => client.id === id)
 }
 
 export const getPoliciesByClient = async (id) => {
