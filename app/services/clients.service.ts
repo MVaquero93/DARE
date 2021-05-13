@@ -1,8 +1,10 @@
-import { apiRequest } from '../helpers/axios-request'
+import { apiRequest } from '../helpers/api-request'
+import { paginator } from '../helpers/paginator'
 import { getToken } from './manage-token.service'
 
-export const getClients = async () => {
-  return apiRequest('clients', await getToken())
+export const getClients = async (req) => {
+  const clients = await apiRequest('clients', await getToken())
+  return paginator(clients, req.query.page, req.query.limit)
 }
 
 export const getOneClient = async (id) => {

@@ -5,7 +5,7 @@ const clientsController = {
 
   getAll: async (req, res: Response) => {
     try {
-      return getClients()
+      return getClients(req)
     } catch(e) {
       return e
     }
