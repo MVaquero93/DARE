@@ -19,6 +19,12 @@ Alternatively, if don't have nodemon installed in your computer, can execute <b>
 $ npm run test
 ```
 
+## Run lint
+
+```bash
+$ npm run lint
+```
+
 ## Notes:
 
 - Used Typescript to precompiled and imports avantatges.
